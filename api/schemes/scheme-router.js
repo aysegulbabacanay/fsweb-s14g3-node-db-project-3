@@ -61,6 +61,18 @@ router.get('/:scheme_id', checkSchemeId, (req, res, next) => {
     })
     .catch(next)
 })
+// ya da aşağıdaki gibi ;
+// try{
+//   const { scheme_id } = req.params
+
+//   const a = await Schemes.findById(scheme_id)
+ 
+//       res.json(a)
+  
+//     }
+//     catch(err){
+//       next(err)
+//     } 
 
 /*
   [GET] /api/schemes/2/steps

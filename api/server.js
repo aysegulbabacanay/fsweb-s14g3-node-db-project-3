@@ -7,4 +7,10 @@ const server = express();
 server.use(express.json());
 server.use('/api/schemes', SchemeRouter);
 
+server.use("*", (req,res)=>{
+res.status(404).json({
+    message:"Not found"
+})
+})
+
 module.exports = server;
